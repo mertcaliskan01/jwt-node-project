@@ -2,7 +2,7 @@ require("dotenv").config();
 require("./config/database").connect();
 var bcrypt = require('bcryptjs');
 const jwt = require("jsonwebtoken");
-
+const auth = require("./middleware/auth");
 const express = require("express");
 
 const app = express();
@@ -107,3 +107,7 @@ app.post("/register", async (req, res) => {
     // Our register logic ends here
   });
   
+
+app.post("/welcome", auth, (req, res) => {
+  res.status(200).send("Welcome 🙌 ");
+});
