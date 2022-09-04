@@ -20,3 +20,19 @@
 
 ## Welcome
 <img width="1361" alt="Screen Shot 2022-09-04 at 14 33 19" src="https://user-images.githubusercontent.com/47431669/188311250-edffc827-3b0f-490c-abc2-c5bb1fa009e2.png">
+
+
+
+## Install dependencies
+
+npm install mongoose express jsonwebtoken dotenv bcryptjs
+
+npm install nodemon -D
+
+## Run Project
+create .env file
+  API_PORT=4001
+  MONGO_URI= Your database URI
+  TOKEN_KEY = Random string
+  
+ npm run dev
